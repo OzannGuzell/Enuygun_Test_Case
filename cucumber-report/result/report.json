@@ -1,0 +1,123 @@
+[
+  {
+    "id": "search-feature",
+    "uri": "/Users/ozan/RubymineProjects/Enuygun_Test_Case/features/tests/search.feature",
+    "keyword": "Feature",
+    "name": "Search Feature",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 3,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "open the homepage",
+            "line": 4,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1380895000
+            }
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-feature;filter-and-validate-flight-departure-times-within-a-specified-range;;2",
+        "keyword": "Scenario Outline",
+        "name": "Filter and Validate Flight Departure Times Within a Specified Range",
+        "description": "",
+        "line": 15,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "And ",
+            "name": "search for round-trip flights from \"İstanbul\" to \"Ankara\"",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 600838000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "select on \"2025-02-22\" with return on \"2025-03-10\"",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:11"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "exit (SystemExit)\n./features/pages/home_page.rb:42:in `select_date_from_calendar'\n./features/pages/home_page.rb:57:in `select_departure_return_date'\n./features/step_definitions/homepage_steps.rb:12:in `\"select on {string} with return on {string}\"'\n./features/tests/search.feature:15:8:in `select on \"2025-02-22\" with return on \"2025-03-10\"'",
+              "duration": 1831736000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "select 6 adult,0 child,6 baby and Business class",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/homepage_steps.rb:15"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "filter departure times between \"10:00\" and \"18:00\"",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/search_steps.rb:7"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "all listed flights should have departure times within \"10:00\" and \"18:00\"",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/search_steps.rb:11"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.40.0/lib/capybara/cucumber.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 899000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
